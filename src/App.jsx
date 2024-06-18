@@ -5,10 +5,11 @@ import Navbar from "./Components/Navbar";
 import NewsBoard from "./Components/NewsBoard";
 
 function App() {
+  const [category, setCategory] = useState("general");
   return (
     <>
-      <Navbar></Navbar>
-      <NewsBoard></NewsBoard>
+      <Navbar setCategory={setCategory}></Navbar>
+      <NewsBoard category={category}></NewsBoard>
     </>
   );
 }
